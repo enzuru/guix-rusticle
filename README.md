@@ -14,3 +14,12 @@ Once this works and is stable, I will submit it upstream to Guix.
 
 - Needs Meson 1.2.0
 - Needs a rust-genbind-cli compiled against Clang 15
+
+## Compiling manually
+
+```
+meson setup builddir/
+meson configure ./builddir -Dgallium-rusticl=true -Dllvm=enabled -Drust_std=2021
+meson compile -C ./builddir
+meson devenv -C builddir clinfo -l
+```
