@@ -6,6 +6,7 @@ Pull this repo and install it using:
 
 ```
 guix package --install-from-file=rusticle.scm
+LD_DEBUG=libs clinfo -l
 ```
 
 Once this works and is stable, I will submit it upstream to Guix.

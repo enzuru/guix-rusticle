@@ -533,18 +533,21 @@ command.")
                       (lambda (port) (format port "~a\n" new-path)))))))))))
                  (native-inputs
                   (modify-inputs (package-native-inputs mesa-opencl)
-                                 (prepend rust
-                                          rust-bindgen-0.64
-                                          rust-bindgen-cli
-                                          rust-spirv-types-0.4
-                                          rust-spirv-std-0.4
-                                          rust-spirv-std-macros-0.4
-                                          spirv-headers
-                                          spirv-cross
-                                          spirv-tools
-                                          libdrm
-                                          python-ply
-                                          meson-1.2.0))))
+                                 (prepend
+                                  clang-15
+                                  clang-runtime-15
+                                  rust
+                                  rust-bindgen-0.64
+                                  rust-bindgen-cli
+                                  rust-spirv-types-0.4
+                                  rust-spirv-std-0.4
+                                  rust-spirv-std-macros-0.4
+                                  spirv-headers
+                                  spirv-cross
+                                  spirv-tools
+                                  libdrm
+                                  python-ply
+                                  meson-1.2.0))))
 
 ;; reinstall meca-opencl and mesa-opencl-icd when done
 ;;update libdrm to 2.4.119
