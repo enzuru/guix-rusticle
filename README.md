@@ -9,3 +9,8 @@ guix package --install-from-file=rusticle.scm
 ```
 
 Once this works and is stable, I will submit it upstream to Guix.
+
+## Notes
+
+- Needs Meson 1.2.0
+- Needs a rust-genbind-cli compiled against Clang 15
